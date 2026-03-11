@@ -7,7 +7,7 @@ use rayon::{
 use serde::{Deserialize, Serialize};
 
 // BPE tokenizer
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Clone)]
 pub struct Tokenizer {
     // Maps token strings to IDs
     vocabulary: HashMap<String, usize>,
